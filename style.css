@@ -1,0 +1,180 @@
+/* ===== כללי ===== */
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #66BFBF;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 5.6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #66BFBF;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+p {
+  line-height: 2;
+  color: #40514E;
+}
+
+hr {
+  border: dotted #829191 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+/* ===== חלק 1: פתיחה ===== */
+.top-container {
+  background-color: #E4F9F5;
+  position: relative;
+  padding-top: 100px;
+}
+
+.top-container h2 {
+  color: #40514E;
+  font-weight: normal;
+  margin-top: -20px;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+  width: 120px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+  width: 120px;
+}
+
+.mountain {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== חלק 2: היכרות ===== */
+.middle-container {
+  margin: 100px auto;
+  width: 60%;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.intro {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ===== חלק 3: כישורים - flexbox ===== */
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 80px auto;
+  text-align: left;
+}
+
+/* השורה השנייה: התמונה בצד השני */
+.skill-row-reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.skill-img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.skill-text {
+  flex: 1;
+}
+
+/* ===== חלק 4: צור קשר ===== */
+.btn {
+  display: inline-block;
+  background-color: #11999E;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #40514E;
+  transform: scale(1.1);
+}
+
+/* ===== חלק 5: footer ===== */
+.bottom-container {
+  background-color: #66BFBF;
+  padding: 50px 0 20px;
+}
+
+.footer-link {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #EAF6F6;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+/* ===== רספונסיביות: מסך קטן (טלפון) ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .middle-container {
+    width: 90%;
+  }
+
+  /* התמונה והטקסט אחד מתחת לשני */
+  .skill-row,
+  .skill-row-reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill-img {
+    width: 70%;
+  }
+
+  .top-cloud,
+  .bottom-cloud {
+    display: none;
+  }
+}
